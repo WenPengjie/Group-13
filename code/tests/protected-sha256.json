@@ -1,0 +1,14 @@
+{
+  "kern/mm/default_pmm.c": "c6b62aec683e290616c3e6a9ebbe1272edb50722b6b2f422ef87d035eb0b3b00",
+  "kern/mm/pmm.h": "afd175be22d87008e4070dde7fc3c1cebe876b55aafeb6fb9a335f8fd66c93bc",
+  "kern/mm/memlayout.h": "c2ddc293e99649d4eb9772cf79fff4f2c5e7100e2b0c9c3d8700f3c00a49a6bd",
+  "kern/driver/dtb.c": "ed03126289ff33282add04a1146d0670d4b0627be10fadf251df30afbdcc50db",
+  "kern/driver/dtb.h": "99f7d2dfb3d9df500d0ce4a31a2ee0e3ec478284c3ad30d29ec1816b1298cfaf",
+  "tools/test_lab2.c": "6feb75f20361d95436856e525af80bef0c55b300391cda3a6deaeda53a0f118d",
+  "tools/test_lab2.h": "9caead317ad13c5cdd143abbc3f250c9b8f284125c4ba17a1e4f479b8d9f444c",
+  "tools/inject.py": "d5ffc8179275979f702dcaa29779bc5cddf5a82b5ca0435d9a4732c5447d0f35",
+  "tools/grade.sh": "9f4b6a6277daa092b70706a67a656dc3978acb0eb8139352a3a7b21ec9f522b1",
+  "kern/init/entry.S": "0f32d455dd8dcaa99987eb2eafd64df5e7535e14477ed2aece8e599e3b911111",
+  "tools/kernel.ld": "171b96007b1c3f4a7ecef522c97797ab5f8740e9bc45d578f95e1559876d2cef",
+  "best_fit_original_test_suffix": "c6a45c572e50f6529352c8855810ee6583c010d62f4f55ffefa3953676095069"
+}
