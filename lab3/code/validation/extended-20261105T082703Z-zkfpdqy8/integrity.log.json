@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/workspace/scratch/98c2d000faf8/lab3-opt-20261105/lab3-optimized/code/tests/check_integrity.py"
+  ],
+  "cwd": "/workspace/scratch/98c2d000faf8/lab3-opt-20261105/lab3-optimized/code",
+  "timeout_seconds": 20,
+  "returncode": 0
+}

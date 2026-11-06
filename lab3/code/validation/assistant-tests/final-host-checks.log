@@ -1,0 +1,31 @@
+2026-11-05T17:26:32+09:00
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+PASS: 56 course source files exactly match lab3_2511057(2).zip; kernel speedup NOT claimed.
+Input ZIP SHA256: 6b746d805db2620796cdd17d6db7f4be18c93e3d5d01f39a2af13079d06cee37
+PASS: 52 original files and 6 protected regions unchanged; student markers filled.
+HOST PASS: actual 288-byte layout, 24 encoding/alignment cases, output formats, fallbacks, unchanged timer EPC, 1000 re-arms and shutdown threshold.
+LIMIT: no RISC-V instructions, CSR restoration, real timer or SBI firmware were executed.
+test_explicit_tool_directory (__main__.ValidationToolsTests.test_explicit_tool_directory) ... ok
+test_extended_oracle_against_fixture (__main__.ValidationToolsTests.test_extended_oracle_against_fixture) ... ok
+test_injection_is_isolated (__main__.ValidationToolsTests.test_injection_is_isolated) ... ok
+test_missing_tools (__main__.ValidationToolsTests.test_missing_tools) ... ok
+test_missing_tools_exit_failure_and_unique_evidence (__main__.ValidationToolsTests.test_missing_tools_exit_failure_and_unique_evidence) ... ok
+test_normal_result_oracle (__main__.ValidationToolsTests.test_normal_result_oracle) ... ok
+test_path_kept (__main__.ValidationToolsTests.test_path_kept) ... ok
+test_refuse_hidden_build_flags (__main__.ValidationToolsTests.test_refuse_hidden_build_flags) ... ok
+test_static_metrics_no_false_runtime_claim (__main__.ValidationToolsTests.test_static_metrics_no_false_runtime_claim) ... ok
+test_success_and_nonzero_exit (__main__.ValidationToolsTests.test_success_and_nonzero_exit) ... RUN: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -c print("actual host child")
+RUN: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -c raise SystemExit(7)
+ok
+test_timeout_only_own_group (__main__.ValidationToolsTests.test_timeout_only_own_group) ... RUN: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -c import subprocess,sys,time; p=subprocess.Popen([sys.executable,"-c",'import signal,time; signal.signal(signal.SIGTERM,signal.SIG_IGN); time.sleep(30)']); print(p.pid,flush=True); time.sleep(30)
+ok
+test_unique_logs_preserve_history (__main__.ValidationToolsTests.test_unique_logs_preserve_history) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.738s
+
+OK
