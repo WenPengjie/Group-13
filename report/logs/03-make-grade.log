@@ -1,0 +1,73 @@
+$ make grade
+lab4 injection complete
+kern/mm/kmalloc.c: In function '__slob_free_pages':
+kern/mm/kmalloc.c:92:22: warning: passing argument 1 of 'kva2page' makes pointer from integer without a cast [-Wint-conversion]
+   92 |  free_pages(kva2page(kva), 1 << order);
+      |                      ^~~
+      |                      |
+      |                      long unsigned int
+In file included from kern/mm/kmalloc.c:7:
+kern/mm/pmm.h:117:16: note: expected 'void *' but argument is of type 'long unsigned int'
+  117 | kva2page(void *kva)
+      |          ~~~~~~^~~
+In file included from kern/test/test_lab4.c:2:
+kern/test/test_lab4.c: In function 'test_lab4_schedule':
+kern/test/test_lab4.c:90:26: warning: passing argument 1 of 'kernel_thread' from incompatible pointer type [-Wincompatible-pointer-types]
+   90 |     assert(kernel_thread(test_lab4_thread, (void *)(intptr_t)1, 0) > 0);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          void (*)(void *)
+kern/debug/assert.h:17:15: note: in definition of macro 'assert'
+   17 |         if (!(x)) {                                     \
+      |               ^
+In file included from kern/test/test_lab4.c:4:
+kern/process/proc.h:67:25: note: expected 'int (*)(void *)' but argument is of type 'void (*)(void *)'
+   67 | int kernel_thread(int (*fn)(void *), void *arg, uint32_t clone_flags);
+      |                   ~~~~~~^~~~~~~~~~~
+In file included from kern/test/test_lab4.c:2:
+kern/test/test_lab4.c:91:26: warning: passing argument 1 of 'kernel_thread' from incompatible pointer type [-Wincompatible-pointer-types]
+   91 |     assert(kernel_thread(test_lab4_thread, (void *)(intptr_t)2, 0) > 0);
+      |                          ^~~~~~~~~~~~~~~~
+      |                          |
+      |                          void (*)(void *)
+kern/debug/assert.h:17:15: note: in definition of macro 'assert'
+   17 |         if (!(x)) {                                     \
+      |               ^
+In file included from kern/test/test_lab4.c:4:
+kern/process/proc.h:67:25: note: expected 'int (*)(void *)' but argument is of type 'void (*)(void *)'
+   67 | int kernel_thread(int (*fn)(void *), void *arg, uint32_t clone_flags);
+      |                   ~~~~~~^~~~~~~~~~~
+riscv64-unknown-elf-ld: removing unused section '.rodata.__warn.str1.8' in file 'obj/kern/debug/panic.o'
+riscv64-unknown-elf-ld: removing unused section '.text.__warn' in file 'obj/kern/debug/panic.o'
+riscv64-unknown-elf-ld: removing unused section '.text.is_kernel_panic' in file 'obj/kern/debug/panic.o'
+riscv64-unknown-elf-ld: removing unused section '.text.kbd_intr' in file 'obj/kern/driver/console.o'
+riscv64-unknown-elf-ld: removing unused section '.text.serial_intr' in file 'obj/kern/driver/console.o'
+riscv64-unknown-elf-ld: removing unused section '.text.pic_enable' in file 'obj/kern/driver/picirq.o'
+riscv64-unknown-elf-ld: removing unused section '.text.slob_init' in file 'obj/kern/mm/kmalloc.o'
+riscv64-unknown-elf-ld: removing unused section '.text.slob_allocated' in file 'obj/kern/mm/kmalloc.o'
+riscv64-unknown-elf-ld: removing unused section '.text.kallocated' in file 'obj/kern/mm/kmalloc.o'
+riscv64-unknown-elf-ld: removing unused section '.text.ksize' in file 'obj/kern/mm/kmalloc.o'
+riscv64-unknown-elf-ld: removing unused section '.text.tlb_invalidate' in file 'obj/kern/mm/pmm.o'
+riscv64-unknown-elf-ld: removing unused section '.rodata.print_vma.str1.8' in file 'obj/kern/mm/vmm.o'
+riscv64-unknown-elf-ld: removing unused section '.text.print_vma' in file 'obj/kern/mm/vmm.o'
+riscv64-unknown-elf-ld: removing unused section '.rodata.print_mm.str1.8' in file 'obj/kern/mm/vmm.o'
+riscv64-unknown-elf-ld: removing unused section '.text.print_mm' in file 'obj/kern/mm/vmm.o'
+riscv64-unknown-elf-ld: removing unused section '.text.mm_create' in file 'obj/kern/mm/vmm.o'
+riscv64-unknown-elf-ld: removing unused section '.text.vma_create' in file 'obj/kern/mm/vmm.o'
+riscv64-unknown-elf-ld: removing unused section '.text.mm_destroy' in file 'obj/kern/mm/vmm.o'
+riscv64-unknown-elf-ld: removing unused section '.text.set_proc_name' in file 'obj/kern/process/proc.o'
+riscv64-unknown-elf-ld: removing unused section '.text.get_proc_name' in file 'obj/kern/process/proc.o'
+riscv64-unknown-elf-ld: removing unused section '.text.find_proc' in file 'obj/kern/process/proc.o'
+riscv64-unknown-elf-ld: removing unused section '.text.sprintputch' in file 'obj/libs/printfmt.o'
+riscv64-unknown-elf-ld: removing unused section '.text.snprintf' in file 'obj/libs/printfmt.o'
+riscv64-unknown-elf-ld: removing unused section '.text.vsnprintf' in file 'obj/libs/printfmt.o'
+riscv64-unknown-elf-ld: removing unused section '.text.strncpy' in file 'obj/libs/string.o'
+riscv64-unknown-elf-ld: removing unused section '.text.strfind' in file 'obj/libs/string.o'
+riscv64-unknown-elf-ld: removing unused section '.text.strtol' in file 'obj/libs/string.o'
+riscv64-unknown-elf-ld: removing unused section '.text.memmove' in file 'obj/libs/string.o'
+riscv64-unknown-elf-ld: removing unused section '.text.memcmp' in file 'obj/libs/string.o'
+gmake[1]: Entering directory '/tmp/lab4-grade.Vs2ZiwW4' + cc kern/init/entry.S + cc kern/init/init.c + cc kern/libs/readline.c + cc kern/libs/stdio.c + cc kern/debug/kdebug.c + cc kern/debug/kmonitor.c + cc kern/debug/panic.c + cc kern/driver/clock.c + cc kern/driver/console.c + cc kern/driver/dtb.c + cc kern/driver/intr.c + cc kern/driver/picirq.c + cc kern/trap/trap.c + cc kern/trap/trapentry.S + cc kern/mm/default_pmm.c + cc kern/mm/kmalloc.c + cc kern/mm/pmm.c + cc kern/mm/vmm.c + cc kern/process/entry.S + cc kern/process/proc.c + cc kern/process/switch.S + cc kern/schedule/sched.c + cc kern/test/test_lab4.c + cc libs/hash.c + cc libs/printfmt.c + cc libs/string.c + ld bin/kernel riscv64-unknown-elf-objcopy bin/kernel --strip-all -O binary bin/ucore.img gmake[1]: Leaving directory '/tmp/lab4-grade.Vs2ZiwW4'
+  -check PMM:                                OK
+  -check Process Create:                     OK
+  -check Schedule:                           OK
+Total Score: 30/30

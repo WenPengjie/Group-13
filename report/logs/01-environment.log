@@ -1,0 +1,8 @@
+2026-11-10T16:49:14+08:00
+Linux 6.6.114.1-microsoft-standard-WSL2
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+riscv64-unknown-elf-gcc (SiFive GCC-Metal 10.2.0-2020.12.8) 10.2.0
+GNU gdb (SiFive GDB-Metal 10.1.0-2020.12.7) 10.1
+QEMU emulator version 4.1.1
+GNU Make 4.4.1
+Python 3.14.4
